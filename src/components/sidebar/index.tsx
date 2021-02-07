@@ -11,7 +11,9 @@ const SideBar = () => {
       </SidebarHeader>
       {sidebarData.map((item, key) => {
         return (
-          <MenuItem key={key.toString()} name={item.name} icon={item.icon} />
+          <div key={key}>
+            <MenuItem name={item.name} icon={item.icon} />
+          </div>
         );
       })}
     </SidebarContainer>

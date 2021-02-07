@@ -4,12 +4,11 @@ import { ItemIcon, ItemText, MenuItemContainer } from "./styles";
 interface Props {
   name: string;
   icon: JSX.Element;
-  key: string;
 }
 
-const MenuItem = ({ name, icon, key }: Props) => {
+const MenuItem = ({ name, icon }: Props) => {
   return (
-    <MenuItemContainer key={key}>
+    <MenuItemContainer>
       <ItemIcon>{icon}</ItemIcon>
       <ItemText>{name}</ItemText>
     </MenuItemContainer>

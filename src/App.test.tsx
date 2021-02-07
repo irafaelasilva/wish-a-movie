@@ -1,10 +1,34 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import App from "./App";
+import MenuItem from "./App";
 
-test("renders hello world", () => {
-  render(<App />);
-  const greetings = screen.queryByText("Hello World");
-  expect(greetings).toBeInTheDocument();
+test("render Home as menu item", () => {
+  render(<MenuItem />);
+  const homeItem = screen.queryByText("Home");
+  expect(homeItem).toBeInTheDocument();
+});
+
+test("render Favorites as menu item", () => {
+  render(<MenuItem />);
+  const favoriteItem = screen.queryByText("Favorites");
+  expect(favoriteItem).toBeInTheDocument();
+});
+
+test("render New Releases as menu item", () => {
+  render(<MenuItem />);
+  const newReleasesItem = screen.queryByText("New Releases");
+  expect(newReleasesItem).toBeInTheDocument();
+});
+
+test("render Recently Watched as menu item", () => {
+  render(<MenuItem />);
+  const recentlyWatchedItem = screen.queryByText("Recently Watched");
+  expect(recentlyWatchedItem).toBeInTheDocument();
+});
+
+test("render Own Collection as menu item", () => {
+  render(<MenuItem />);
+  const ownCollectionItem = screen.queryByText("Own Collection");
+  expect(ownCollectionItem).toBeInTheDocument();
 });
