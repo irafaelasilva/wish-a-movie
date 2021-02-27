@@ -17,18 +17,18 @@ test("render Favorites as menu item", () => {
 
 test("render New Releases as menu item", () => {
   render(<MenuItem />);
-  const newReleasesItem = screen.queryByText("New Releases");
+  const newReleasesItem = screen.queryByText("New releases");
   expect(newReleasesItem).toBeInTheDocument();
 });
 
 test("render Recently Watched as menu item", () => {
   render(<MenuItem />);
-  const recentlyWatchedItem = screen.queryByText("Recently Watched");
+  const recentlyWatchedItem = screen.queryByText("Recently watched");
   expect(recentlyWatchedItem).toBeInTheDocument();
 });
 
 test("render Own Collection as menu item", () => {
   render(<MenuItem />);
-  const ownCollectionItem = screen.queryByText("Own Collection");
+  const ownCollectionItem = screen.queryByText("Own collection");
   expect(ownCollectionItem).toBeInTheDocument();
 });
