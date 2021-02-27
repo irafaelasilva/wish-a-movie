@@ -8,7 +8,7 @@ import WatchLaterOutlinedIcon from "@material-ui/icons/WatchLaterOutlined";
 export const sidebarData: SideBarItems[] = [
   {
     name: "Home",
-    icon: <HomeOutlinedIcon />,
+    icon: <HomeOutlinedIcon fontSize="small" />,
     link: "/",
   },
   {

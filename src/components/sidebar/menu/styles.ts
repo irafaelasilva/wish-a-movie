@@ -14,5 +14,6 @@ export const ItemIcon = styled.div`
 `;
 export const ItemText = styled.p`
   display: flex;
+  line-height: 20px;
   vertical-align: middle;
 `;
