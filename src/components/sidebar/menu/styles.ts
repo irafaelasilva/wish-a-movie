@@ -10,7 +10,7 @@ export const MenuItemContainer = styled.div`
 
 export const ItemIcon = styled.div`
   display: flex;
-  vertical-align: bottom;
+  margin-right: 5px;
 `;
 export const ItemText = styled.p`
   display: flex;

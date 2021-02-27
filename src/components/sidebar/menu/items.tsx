@@ -17,17 +17,17 @@ export const sidebarData: SideBarItems[] = [
     link: "/favorites",
   },
   {
-    name: "New Releases",
+    name: "New releases",
     icon: <MovieFilterOutlinedIcon fontSize="small" />,
     link: "/new-releases",
   },
   {
-    name: "Recently Watched",
+    name: "Recently watched",
     icon: <WatchLaterOutlinedIcon fontSize="small" />,
     link: "/recently-watched",
   },
   {
-    name: "Own Collection",
+    name: "Own collection",
     icon: <VideoLibraryOutlinedIcon fontSize="small" />,
     link: "/collection",
   },
