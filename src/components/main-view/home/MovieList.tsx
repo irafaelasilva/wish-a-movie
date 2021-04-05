@@ -17,6 +17,7 @@ const MovieList = ({ movies }: Props) => {
     <CardContainer>
       {movies.map((movie) => (
         <MovieCard
+          key={movie.id}
           posterPath={movie.poster_path}
           releaseDate={movie.release_date}
           voteRating={movie.vote_average}

@@ -1,4 +1,5 @@
 import React from "react";
+import Rating from "@material-ui/lab/Rating";
 import styled from "@emotion/styled";
 
 const Sprite = styled.img`
@@ -34,7 +35,12 @@ export const MovieCard = ({ posterPath, voteRating }: Props) => {
           src={`${imageUrl}${posterPath}`}
         />
         <div className="card-body mx-auto">
-          <h6 className="card-title">{voteRating}</h6>
+          <Rating
+            name="size-small"
+            value={voteRating / 2.5}
+            precision={0.5}
+            readOnly
+          />
         </div>
       </Card>
     </div>
