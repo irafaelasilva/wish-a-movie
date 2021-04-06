@@ -1,7 +1,12 @@
+import styled from "@emotion/styled";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Movie } from "../types";
 import MovieList from "./MovieList";
+
+const TitlePage = styled.h2`
+  padding: 20px;
+`;
 
 const Home = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -23,6 +28,7 @@ const Home = () => {
 
   return (
     <>
+      <TitlePage>Popular movies</TitlePage>
       <div>{movies && <MovieList movies={movies} />}</div>
     </>
   );
