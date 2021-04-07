@@ -21,20 +21,21 @@ const Card = styled.div`
 interface Props {
   posterPath: string;
   overview?: string;
-  releaseDate: string;
+  releaseDate?: string;
   voteRating: number;
 }
 
 export const MovieCard = ({ posterPath, voteRating }: Props) => {
   const imageUrl = "https://image.tmdb.org/t/p/w200";
   return (
-    <div className="col-md-3 col-sm-6 mb-5">
+    <div className="col-md-3 col-sm-6 mb-5" data-testid="movie-card">
       <Card className="card-img text-center">
         <Sprite
           className="card-img-top rounded mx-auto mt-2"
           src={`${imageUrl}${posterPath}`}
+          data-testid="movie-card-image"
         />
-        <div className="card-body mx-auto">
+        <div className="card-body mx-auto" data-testid="movie-card-rating">
           <Rating
             name="size-small"
             value={voteRating / 2.5}
