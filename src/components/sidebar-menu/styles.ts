@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const SidebarContainer = styled.div`
-  width: 15%;
+  width: 12%;
   background: white;
   align-content: center;
   justify-content: center;
@@ -18,7 +18,7 @@ export const SidebarHeader = styled.div`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
   padding: 50px;
 `;
 
