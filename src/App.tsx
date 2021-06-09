@@ -6,15 +6,15 @@ import MovieFilterOutlinedIcon from "@material-ui/icons/MovieFilterOutlined";
 import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
 import VideoLibraryOutlinedIcon from "@material-ui/icons/VideoLibraryOutlined";
 import WatchLaterOutlinedIcon from "@material-ui/icons/WatchLaterOutlined";
-import Home from "./components/main-view/home/Home";
-import NewReleases from "./components/main-view/new-releases/NewReleases";
+import Home from "./components/pages/home/Home";
+import NewReleases from "./components/pages/new-releases/NewReleases";
 import MenuItem from "./components/sidebar-menu";
 import {
   SidebarContainer,
   SidebarHeader,
 } from "./components/sidebar-menu/styles";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { MainView } from "./components/main-view/styles";
+import { MainView } from "./components/pages/styles";
 
 function App() {
   return (

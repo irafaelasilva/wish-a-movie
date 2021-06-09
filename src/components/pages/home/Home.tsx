@@ -1,22 +1,21 @@
 import styled from "@emotion/styled";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { HomeUrl } from "../../../constants";
 import { Movie } from "../types";
-import MovieList from "./MovieList";
+import MovieList from "../../common/MovieList";
 
 const TitlePage = styled.h2`
   padding: 20px;
 `;
 
-export const url = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MDB_KEY}&language=en-US&page=1`;
-
-const Home = () => {
+const HomePage = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       axios
-        .get(url)
+        .get(HomeUrl)
         .then((response) => setMovies(response.data.results))
         .catch((error) => {
           console.log(error);
@@ -26,6 +25,8 @@ const Home = () => {
     fetchData();
   }, []);
 
+  console.log({ movies });
+
   return (
     <>
       <TitlePage>Popular movies</TitlePage>
@@ -34,4 +35,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
