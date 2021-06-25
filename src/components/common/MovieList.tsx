@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
-import React from "react";
-import { Movie } from "../pages/types";
+import { Movie } from "../../entities/movie";
 import MovieCard from "./MovieCard";
 
 const CardContainer = styled.div`
