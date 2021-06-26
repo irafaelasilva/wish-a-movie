@@ -1,14 +1,18 @@
+import { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { Movie } from "../../entities/movie";
 import MovieList from "./MovieList";
-import { getPopular } from '/Users/rafaelasilva/Desktop/personal-web/wish-a-movie/src/api/index'
 
-export const PopularMovies = () => {
+interface Props {
+  getMovies: () => Promise<AxiosResponse<any>>;
+}
+
+export const Popular = ({ getMovies }: Props) => {
   const [movies, setMovies] = useState<Movie[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      getPopular()
+      getMovies()
         .then((response) => setMovies(response.data.results))
         .catch((error) => {
           console.log(error);
@@ -16,7 +20,7 @@ export const PopularMovies = () => {
     };
 
     fetchData();
-  }, []);
+  }, [getMovies]);
 
   return <MovieList movies={movies} data-testid="move-list" />;
 };

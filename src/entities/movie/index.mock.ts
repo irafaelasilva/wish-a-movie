@@ -1,15 +1,17 @@
-import { Movie } from "."
+import { Movie } from ".";
 
-export const getMock = <T>(def: () => T) => (p?: Partial<T>): T => ({
+export const getMock =
+  <T>(def: () => T) =>
+  (p?: Partial<T>): T => ({
     ...def(),
     ...p,
-  })
+  });
 
-const defaultMoviesMock = (): Movie => {
+const defaultMovieMock = (): Movie => {
   return {
     id: 1,
-    title: 'A fake movie',
-    overview: 'A description for a fake movie',
+    title: "A fake movie",
+    overview: "A description for a fake movie",
     release_date: "2021-06-17",
     poster_path: "/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg",
     vote_average: 9.9,
@@ -18,8 +20,8 @@ const defaultMoviesMock = (): Movie => {
     original_language: "en",
     popularity: 6537.554,
     video: false,
-    vote_count:  1066,
-  }
-}
+    vote_count: 1066,
+  };
+};
 
-export const getMoviesMock = getMock(defaultMoviesMock)
+export const getMovieMock = getMock(defaultMovieMock);

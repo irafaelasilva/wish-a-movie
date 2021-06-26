@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
-import { PopularMovies } from "../../common/PopularMovies";
+import { getMovies } from "../../../api";
+import { popularMoviesUrl } from "../../../constants";
+import { Popular } from "../../common/PopularMovies";
 
 const TitlePage = styled.h2`
   padding: 20px;
@@ -9,7 +11,7 @@ const HomePage = () => {
   return (
     <>
       <TitlePage>Popular movies</TitlePage>
-      <PopularMovies />
+      <Popular getMovies={() => getMovies(popularMoviesUrl)} />
     </>
   );
 };

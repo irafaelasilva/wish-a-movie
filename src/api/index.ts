@@ -1,7 +1,6 @@
-import axios from 'axios'
-import { homeUrl } from "/Users/rafaelasilva/Desktop/personal-web/wish-a-movie/src/constants/index";
+import axios from "axios";
 
-export const getPopular = async () => {
-    const response = await axios.get(homeUrl);
-    return response
-}
+export const getMovies = async (url: string) => {
+  const response = await axios.get(url);
+  return response;
+};
