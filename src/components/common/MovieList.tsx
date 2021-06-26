@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Movie } from "../../entities/movie";
 import MovieCard from "./MovieCard";
 
-const CardContainer = styled.div`
+const CardContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
 `;
@@ -13,15 +13,9 @@ interface Props {
 
 const MovieList = ({ movies }: Props) => {
   return (
-    <CardContainer>
+    <CardContainer aria-label="Movies">
       {movies.map((movie) => (
-        <MovieCard
-          data-testid="movie-card"
-          key={movie.id}
-          posterPath={movie.poster_path}
-          releaseDate={movie.release_date}
-          voteRating={movie.vote_average}
-        />
+        <MovieCard key={movie.id} movie={movie} />
       ))}
     </CardContainer>
   );
