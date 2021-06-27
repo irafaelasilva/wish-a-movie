@@ -3,21 +3,19 @@ import Rating from "@material-ui/lab/Rating";
 import styled from "@emotion/styled";
 import { Movie } from "../../entities/movie";
 
-const Sprite = styled.img`
-  width: 210px;
-  height: 300px;
-`;
-
-const Card = styled.div`
-  max-width: 210px;
-  max-height: 304px;
+const Container = styled.div`
+  margin-left: 10px;
+  margin-bottom: 5px;
+  max-width: 240px;
+  width: 240px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0, 12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
-  margin-bottom: 40px;
 `;
+
+const Sprite = styled.img``;
 
 interface Props {
   movie: Movie;
@@ -26,12 +24,12 @@ interface Props {
 export const MovieCard = ({ movie }: Props) => {
   const imageUrl = "https://image.tmdb.org/t/p/w200";
   return (
-    <div
-      className="col-md-3 col-sm-6 mb-5"
+    <Container
+      className="card text-center col-md-3 mb-5"
       data-testid="movie-card"
       role="listitem"
     >
-      <Card className="card-img text-center">
+      <div>
         <Sprite
           className="card-img-top rounded mx-auto mt-2"
           src={`${imageUrl}${movie.poster_path}`}
@@ -45,8 +43,8 @@ export const MovieCard = ({ movie }: Props) => {
             readOnly
           />
         </div>
-      </Card>
-    </div>
+      </div>
+    </Container>
   );
 };
 
