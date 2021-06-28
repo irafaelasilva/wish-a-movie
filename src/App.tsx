@@ -4,7 +4,6 @@ import { Wrapper } from "./App.styles";
 import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
 import Home from "./components/pages/home/Home";
-import NewReleases from "./components/pages/new-releases/NewReleases";
 import MenuItem from "./components/sidebar-menu";
 import {
   SidebarContainer,
@@ -12,6 +11,7 @@ import {
 } from "./components/sidebar-menu/styles";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MainView } from "./components/pages/styles";
+import Favorites from "./components/pages/favorites/favorites";
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function App() {
         </SidebarContainer>
         <MainView>
           <Route exact path="/" component={Home} />
-          <Route path="/new-releases" component={NewReleases} />
+          <Route path="/favorites" component={Favorites} />
         </MainView>
       </Wrapper>
     </Router>
