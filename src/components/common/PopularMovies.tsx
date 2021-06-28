@@ -1,10 +1,9 @@
-import { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { Movie } from "../../entities/movie";
 import MovieList from "./MovieList";
 
 interface Props {
-  getMovies: () => Promise<AxiosResponse<any>>;
+  getMovies: () => Promise<any>;
 }
 
 export const Popular = ({ getMovies }: Props) => {
@@ -22,5 +21,5 @@ export const Popular = ({ getMovies }: Props) => {
     fetchData();
   }, [getMovies]);
 
-  return <MovieList movies={movies} data-testid="move-list" />;
+  return <MovieList movies={movies} />;
 };
