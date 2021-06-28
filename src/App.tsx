@@ -2,10 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Wrapper } from "./App.styles";
 import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
-import MovieFilterOutlinedIcon from "@material-ui/icons/MovieFilterOutlined";
 import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
-import VideoLibraryOutlinedIcon from "@material-ui/icons/VideoLibraryOutlined";
-import WatchLaterOutlinedIcon from "@material-ui/icons/WatchLaterOutlined";
 import Home from "./components/pages/home/Home";
 import NewReleases from "./components/pages/new-releases/NewReleases";
 import MenuItem from "./components/sidebar-menu";
@@ -34,27 +31,6 @@ function App() {
             <MenuItem
               name="Favorites"
               icon={<FavoriteBorderOutlinedIcon fontSize="small" />}
-            />
-          </Link>
-          <Link style={{ textDecoration: "none" }} to="/new-releases">
-            <MenuItem
-              name="New releases"
-              icon={<MovieFilterOutlinedIcon fontSize="small" />}
-            />
-          </Link>
-          <Link style={{ textDecoration: "none" }} to="/recently-watched">
-            <MenuItem
-              name="Recently watched"
-              icon={<WatchLaterOutlinedIcon fontSize="small" />}
-            />
-          </Link>
-          <Link
-            style={{ textDecoration: "none", color: "white" }}
-            to="/collection"
-          >
-            <MenuItem
-              name="Own collection"
-              icon={<VideoLibraryOutlinedIcon fontSize="small" />}
             />
           </Link>
         </SidebarContainer>
