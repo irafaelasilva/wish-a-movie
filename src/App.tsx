@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Wrapper } from "./App.styles";
-import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
+import TheatersOutlinedIcon from "@material-ui/icons/TheatersOutlined";
 import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
 import Home from "./components/pages/home/Home";
 import MenuItem from "./components/sidebar-menu";
@@ -22,16 +22,10 @@ function App() {
             <img src="logo2.png" alt="logo" width="100px" />
           </SidebarHeader>
           <Link style={{ textDecoration: "none" }} to="/">
-            <MenuItem
-              name="Home"
-              icon={<HomeOutlinedIcon fontSize="small" />}
-            />
+            <MenuItem name="Movies" icon={<TheatersOutlinedIcon />} />
           </Link>
           <Link style={{ textDecoration: "none" }} to="/Favorites">
-            <MenuItem
-              name="Favorites"
-              icon={<FavoriteBorderOutlinedIcon fontSize="small" />}
-            />
+            <MenuItem name="Wacthed" icon={<FavoriteBorderOutlinedIcon />} />
           </Link>
         </SidebarContainer>
         <MainView>

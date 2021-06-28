@@ -20,6 +20,7 @@ export const SidebarHeader = styled.div`
   margin-right: auto;
   width: 100%;
   padding: 50px;
+  margin-bottom: 50%;
 `;
 
 export const MenuItemContainer = styled.div`
@@ -36,9 +37,10 @@ export const MenuItemContainer = styled.div`
 export const ItemIcon = styled.div`
   display: flex;
   margin-right: 5px;
-  line-height: 16px;
 `;
 
 export const ItemText = styled.p`
   display: flex;
+  height: 20px;
+  font-size: medium;
 `;

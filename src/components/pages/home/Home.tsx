@@ -10,8 +10,9 @@ const TitlePage = styled.h2`
 const HomePage = () => {
   return (
     <>
-      <TitlePage>Popular movies</TitlePage>
+      <TitlePage>Popular</TitlePage>
       <Popular getMovies={() => getMovies(popularMoviesUrl)} />
+      <TitlePage>New Releases</TitlePage>
     </>
   );
 };
