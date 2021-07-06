@@ -12,7 +12,6 @@ const HomePage = () => {
     <>
       <TitlePage>Popular</TitlePage>
       <Popular getMovies={() => getMovies(popularMoviesUrl)} />
-      <TitlePage>New Releases</TitlePage>
     </>
   );
 };

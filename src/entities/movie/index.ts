@@ -12,3 +12,8 @@ export type Movie = {
   video: false;
   vote_count: number;
 };
+
+export type MoviesContextState = {
+  movies: Movie[];
+  addWatchedMovie: (movie: Movie) => void;
+};
