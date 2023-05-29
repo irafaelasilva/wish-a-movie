@@ -1,4 +1,4 @@
-# Wish a movie app
+# Wish a movie app - [WIP]
 
 A simple app for improve my ability to design and test application (Still WIP)
 
